@@ -5,7 +5,7 @@
 - [X] Display
 - [X] MTP/OTG Storage
 - [X] ADB/Fastbootd
-- [] Vibrator
+- [X] Vibrator
 - [X] Display Settings
 - [X] Flashing 
 - [X] Backup & Restore 
