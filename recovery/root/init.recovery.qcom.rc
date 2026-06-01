@@ -63,9 +63,11 @@ on property:twrp.modules.loaded=true
     wait /sys/kernel/boot_adsp/ssr
     write /sys/kernel/boot_adsp/ssr 1
     wait /sys/class/power_supply/battery
-    start override-spl
     start vendor.health-default
     umount /firmware
+
+on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
+    start prepdecrypt.vendor
 
 on property:hwservicemanager.ready=true
     setprop sys.boot_completed 1
